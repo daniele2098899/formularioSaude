@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(to bottom, #d192ca, #dee884);
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  /* texto claro para contraste */
+
+}
+
+.container {
+  background: #d7b9f6;
+  padding: 40px 40px;
+  border-radius: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: 'Ralway', sans-serif;
+  text-align: center;
+  color: #8638d0;
+  margin-bottom: 25px;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 20px;
+}
+
+.form-row {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+legend {
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #6b21a8;
+  outline: none;
+}
+
+/*genero*/
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #6b21a8;
+  color: white;
+  border: none;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9333ea;
+}
+
+#resultado {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #efd1f4;
+  color: rgb(82, 74, 82);
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(107, 33, 168, 0.5);
+
+  /* Para esconder inicialmente */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#resultado.mostrar {
+  /* Exibe o resultado suavemente */
+  opacity: 1;
+  pointer-events: auto;
+  /* libera interação */
+}
+
+
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+  .form-row {
+    flex: 1 1 100%;
+  }
+}
